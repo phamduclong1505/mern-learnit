@@ -1,0 +1,50 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "chien",
+    "password": "chien"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "chien",
+    "password": "chien"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNmZTZmYzhiYWM1ZDgwMmYxM2NlZjciLCJpYXQiOjE2NDgzNTUwNjh9.8vSlUsE4I9XXXD_9rspqFENnxhgrJ8FX0DjFv6d7Weo
+
+{
+    "title": "my 4th post",
+    "description": "abc",
+    "url": "google.com",
+    "status": "LEARNED"
+}   
+
+###
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNmZTZmYzhiYWM1ZDgwMmYxM2NlZjciLCJpYXQiOjE2NDgzNTUwNjh9.8vSlUsE4I9XXXD_9rspqFENnxhgrJ8FX0DjFv6d7Weo
+
+###
+PUT http://localhost:5000/api/posts/623fe7108bac5d802f13cefa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNmZTZmYzhiYWM1ZDgwMmYxM2NlZjciLCJpYXQiOjE2NDgzNTUwNjh9.8vSlUsE4I9XXXD_9rspqFENnxhgrJ8FX0DjFv6d7Weo
+
+{
+    "title": "my updated",
+    "description": "hahaha",
+    "url": "google.com",
+    "status": "LEARNING"
+}
+
+###
+DELETE  http://localhost:5000/api/posts/623fe7108bac5d802f13cefa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNmZTZmYzhiYWM1ZDgwMmYxM2NlZjciLCJpYXQiOjE2NDgzNTUwNjh9.8vSlUsE4I9XXXD_9rspqFENnxhgrJ8FX0DjFv6d7Weo
